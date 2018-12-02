@@ -24,11 +24,11 @@ function handleSubmit(event) {
 
 function askForName() {
   form.classList.add(SHOWING_CN);
-  form.addEventListener(handleSubmit);
+  form.addEventListener("submit", handleSubmit);
 }
 
 function loadName() {
-  const currentUser = localStorage.getItem();
+  const currentUser = localStorage.getItem(USER_LS);
 
   if (currentUser === null) {
     askForName();
